@@ -200,6 +200,16 @@ nav a:hover {
     align-items: center;
     text-align: center;
 }
+.hero-img {
+    background: url(/great-idea/img/services-header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 285px;
+}
+section.page-description h1 {
+    font-size: 30px;
+    margin-top: 25px;
+}
 .hero h1 {
     font-size: 70px;
 }
@@ -218,6 +228,45 @@ nav a:hover {
 .info-box {
     margin: 3%;
 }
+section.content-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.content-boxes .box {
+    width: 48%;
+    padding: 2%;
+    margin: 2% 0;
+    border: 1px solid black;
+    background: #efefef;
+}
+section.content-boxes .box p {
+    margin-bottom: 20px;
+}
+section.content-boxes .box a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    font-size: 13px;
+    background: #f7f7f7;
+    padding: 8px 30px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.facts {
+    display: flex;
+}
+.facts div {
+    padding: 0% 5% 3% 0;
+}
+.facts ul {
+    list-style: square;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+.facts li {
+    margin-bottom: 10px;
+}
 
 /*** Footer ***/
 
@@ -227,6 +276,14 @@ footer .copyright {
 }
 
 /*** Media Queries ***/
+
+@media screen and (max-width: 930px) {
+    .page-description,
+    .content-boxes,
+    .facts {
+        padding: 0 25px;
+    }
+}
 
 @media screen and (max-width: 767px) {
     .hero,
@@ -243,6 +300,9 @@ footer .copyright {
         order: -1;
         margin-top: 15px;
     }
+    header a img {
+        margin-bottom: 15px;
+    }
     nav {
         width: 100%;
         justify-content: space-evenly;
@@ -252,5 +312,15 @@ footer .copyright {
     }
     section.hero div {
         margin: 3% 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    section.content-boxes,
+    .facts {
+        flex-direction: column;
+    }
+    section.content-boxes .box {
+        width: 100%;
     }
 }
